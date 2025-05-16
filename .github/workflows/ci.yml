@@ -19,4 +19,5 @@ jobs:  # 工作流包含的任务
           go-version: "1.23.5"  # 指定 Go 的版本为 1.23.5
 
       - name: Force Failure  # 步骤名称
-        run: (exit 1)  # 执行 shell 命令，直接退出并返回错误码 1，导致构建失败
+#        run: (exit 1)  # 执行 shell 命令，直接退出并返回错误码 1，导致构建失败
+        run: go version  # 执行 shell 命令，直接退出并返回错误码 1，导致构建失败
