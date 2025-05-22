@@ -19,7 +19,7 @@ jobs:  # 工作流包含的任务
       - name: reformatting code
         run: test -z $(go fmt ./...)
       - name: install staitccheck
-        run: go install staticcheck
+        run:  go install honnef.co/go/tools/cmd/staticcheck@latest
       - name: linting
         run: staticcheck ./...
   tests:  # 任务的 ID
