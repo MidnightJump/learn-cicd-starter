@@ -18,6 +18,8 @@ jobs:  # 工作流包含的任务
           go-version: "1.23.5"  # 指定 Go 的版本为 1.23.5
       - name: reformatting code
         run: test -z $(go fmt ./...)
+      - name: install staitccheck
+        run: go install staticcheck
       - name: linting
         run: staticcheck ./...
   tests:  # 任务的 ID
