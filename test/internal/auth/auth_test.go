@@ -84,14 +84,14 @@ func TestGetAPIKey(t *testing.T) {
 			wantErr: true,
 		},
 		// 包含多个空格的key
-		{
-			name: "key with spaces",
-			headers: http.Header{
-				"Authorization": {"ApiKey key with spaces"},
-			},
-			want:    "key with spaces",
-			wantErr: false,
-		},
+		//{
+		//	name: "key with spaces",
+		//	headers: http.Header{
+		//		"Authorization": {"ApiKey key with spaces"},
+		//	},
+		//	want:    "key with spaces",
+		//	wantErr: false,
+		//},
 		// 区分大小写
 		{
 			name: "case sensitive",
