@@ -83,7 +83,7 @@ func TestGetAPIKey(t *testing.T) {
 			want:    "",
 			wantErr: true,
 		},
-		//// 包含多个空格的key
+		// 包含多个空格的key
 		//{
 		//	name: "key with spaces",
 		//	headers: http.Header{
