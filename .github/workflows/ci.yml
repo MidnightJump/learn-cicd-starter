@@ -38,3 +38,7 @@ jobs:  # 工作流包含的任务
       - name: Force Failure  # 步骤名称
 #        run: (exit 1)  # 执行 shell 命令，直接退出并返回错误码 1，导致构建失败
         run: go test -cover ./...  # 执行 shell 命令，直接退出并返回错误码 1，导致构建失败
+      - name: Install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+      - name: gosec check
+        run: gosec ./...
